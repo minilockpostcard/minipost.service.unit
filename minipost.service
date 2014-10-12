@@ -1,0 +1,12 @@
+# miniLock Postcard [systemd](http://freedesktop.org/wiki/Software/systemd/) unit file for [CoreOS](https://coreos.com/).
+#
+# miniLock Postcard HTTPS service runs in a container named `minipost`
+# from a [Docker](https://docker.com/) image named `minipost_image`.
+
+[Unit]
+Description=miniLock Postcard HTTPS service
+After=docker.service
+
+[Service]
+ExecStart=/usr/bin/docker run --name minipost --rm --publish 80:80 --publish 443:443 --volume /home/core/minipost:/minipost minipost_image
+ExecStop=/usr/bin/docker stop minipost

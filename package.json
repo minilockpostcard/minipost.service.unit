@@ -1,0 +1,10 @@
+{
+  "description": "Deploy miniLock Postcard to https://minipost.link",
+  "name": "minipost.link",
+  "private": true,
+  "dependencies": {
+    "authority": "45678/authority.git",
+    "coffee-script": "1.7.x",
+    "flightplan": "0.4.x"
+  }
+}

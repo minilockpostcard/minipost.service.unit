@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "Git post receive hook"
+unset GIT_INDEX_FILE
+git --git-dir=/home/core/minipost.git --work-tree=/home/core/minipost reset --hard deploy

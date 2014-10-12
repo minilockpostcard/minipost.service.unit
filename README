@@ -1,0 +1,5 @@
+docker run --interactive --tty --volume /home/core/minipost:/minipost minipost_image /usr/bin/bash
+
+cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.pacnew
+rankmirrors --verbose /etc/pacman.d/mirrorlist.pacnew
