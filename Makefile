@@ -2,7 +2,7 @@ default: minipost.link.secret.key minipost.link.csr sin.minipost.link nyc.minipo
 
 clean:
 	rm sin.minipost.link.crt sin.minipost.link.secret.key
-	rm nyc.minipost.link.secret.key nyc.minipost.link.crt
+	rm nyc.minipost.link.crt nyc.minipost.link.secret.key
 
 
 # Make secret key and certificate for nyc.minipost.link
