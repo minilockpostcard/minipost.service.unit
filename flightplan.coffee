@@ -39,7 +39,7 @@ flightplan.remote "stop", (remote) ->
 flightplan.remote ["restart"], (remote) ->
   remote.sudo("systemctl stop minipost")
   remote.sudo("systemctl start minipost")
-  remote.sudo("systemctl status minipost")
+  remote.exec("systemctl status minipost")
 
 flightplan.remote ["setup", "setup_public_folder"], (remote) ->
   if remote.exec("ls minipost", failsafe:yes, silent:yes).code isnt 0
