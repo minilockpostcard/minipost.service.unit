@@ -1,6 +1,4 @@
-# [Flightplan](https://github.com/pstadler/flightplan) executes command sequences on local and remote hosts.
 Flightplan = require "flightplan"
-
 flightplan = new Flightplan
 flightplan.briefing
   destinations:
