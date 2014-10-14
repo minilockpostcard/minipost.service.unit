@@ -85,7 +85,6 @@ flightplan.remote ["setup", "setup_service"], (remote) ->
 
 flightplan.remote ["erase"], (remote) ->
   remote.exec("rm -rf minipost")
-  remote.exec("rm -rf minipost_image")
   remote.exec("rm -rf minipost.git")
   remote.exec("rm -rf minipost.service")
 
